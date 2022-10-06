@@ -48,8 +48,8 @@ public class ActivityServiceImpl implements ActivityService{
 		} 
 	}
 	
-	
-	public Activity deleteActivity(int id) {
+	@Override
+	public Activity deleteActivity(int id)  throws NoSuchIdExistsException{
 		Activity ac = activityRepo.findById(id).orElse(null);
 		
 		   if(ac==null) {
@@ -97,11 +97,9 @@ public class ActivityServiceImpl implements ActivityService{
 	}
 
 
-	@Override
-	public Activity deleteActivity(Activity activity) throws NoSuchIdExistsException {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
+
+
 }
 	
 	

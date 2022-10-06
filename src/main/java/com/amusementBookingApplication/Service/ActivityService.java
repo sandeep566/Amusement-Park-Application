@@ -18,7 +18,7 @@ public interface ActivityService  {
 	public Activity updateActivity(Activity activity) throws NoSuchActivityExistsException;
 	
 	//method to delete activity
-	public Activity deleteActivity(Activity activity) throws NoSuchIdExistsException; 
+	public Activity deleteActivity(int id) throws NoSuchIdExistsException; 
 	
 	//List to get All activities
 	List<Activity> viewActivitiesOfCharges(float charges);
